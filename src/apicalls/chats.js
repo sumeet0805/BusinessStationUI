@@ -2,7 +2,7 @@ import {axiosInstance} from "./index";
 
 export const GetAllChats = async() => {
     try{
-        const response= await axiosInstance.get("http://localhost:5000/api/chats/get-all-chats");
+        const response= await axiosInstance.get("https://businessstationservice.onrender.com/api/chats/get-all-chats");
         return response.data;
       }catch(error){
         return error.response.data;
@@ -11,7 +11,7 @@ export const GetAllChats = async() => {
 
 export const CreateNewChat = async(members) => {
     try{
-        const response= await axiosInstance.post("http://localhost:5000/api/chats/create-new-chat",
+        const response= await axiosInstance.post("https://businessstationservice.onrender.com/api/chats/create-new-chat",
         {
             members,
         });
@@ -23,7 +23,7 @@ export const CreateNewChat = async(members) => {
 
 export const clearChatMessages = async(chatId) =>{
   try{
-    const response = await axiosInstance.post("http://localhost:5000/api/chats/clear-unread-messages",
+    const response = await axiosInstance.post("https://businessstationservice.onrender.com/api/chats/clear-unread-messages",
     {
       chatId,
     })
