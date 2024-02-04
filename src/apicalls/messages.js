@@ -3,7 +3,7 @@ import { axiosInstance } from "./index"
 
 export const SendMessage=async(message)=>{
     try{
-        const response= await axiosInstance.post("http://localhost:5000/api/messages/new-message",
+        const response= await axiosInstance.post("https://businessstationservice.onrender.com/api/messages/new-message",
         message
         );
         return response.data
@@ -14,7 +14,7 @@ export const SendMessage=async(message)=>{
 
 export const GetMessages=async(chatId)=>{
     try{
-        const response=await axiosInstance.get(`http://localhost:5000/api/messages/get-all-messages/${chatId}`);
+        const response=await axiosInstance.get(`https://businessstationservice.onrender.com/api/messages/get-all-messages/${chatId}`);
         return response.data
     }catch(err){
         return err
