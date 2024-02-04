@@ -26,7 +26,7 @@
   },
   "scripts": {
     "build": "npm install",
-    "start":"node index.js"
+    "start":"node src/index.js"
   },
   "eslintConfig": {
     "extends": [
