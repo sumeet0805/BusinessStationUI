@@ -5,7 +5,7 @@ import UserList from './components/userList';
 import { useSelector } from 'react-redux';
 import {io} from "socket.io-client";
 import { useEffect } from 'react';
-const socket=io("http://localhost:5000"); 
+const socket=io("https://businessstationservice.onrender.com"); 
 
 function Home() {
  
